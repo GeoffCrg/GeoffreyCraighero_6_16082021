@@ -8,6 +8,8 @@ const multer = require("../middleware/multer-config");
 
 const sauceCtrl = require("../controllers/sauce");
 
+// les routes de création et de modifications sont vérifiées par le middleware auth
+
 router.get("/:id", auth, sauceCtrl.getOneSauce);
 
 router.post("/", auth, multer, sauceCtrl.createSauce);

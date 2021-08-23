@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+
+//Création du schéma pour gérer nos sauces
+//*Les likes et dislikes ne sont pas necessaire à la crétion d'une sauce
 const sauceSchema = mongoose.Schema({
   userId: { type: String, required: true },
   name: { type: String, required: true },

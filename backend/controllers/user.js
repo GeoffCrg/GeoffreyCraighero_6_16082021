@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 
 const User = require("../models/user");
 
+// Création d'une fonction pour la gestion de login des utilisateurs
 exports.signup = (req, res, next) => {
   bcrypt
     .hash(req.body.password, 10)

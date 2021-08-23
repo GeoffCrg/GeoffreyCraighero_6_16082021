@@ -16,7 +16,7 @@ exports.getOneSauce = (req, res, next) => {
     .catch((error) => res.status(404).json({ error }));
 };
 
-// Create new sauce
+// Créer une nouvelle sauce
 exports.createSauce = (req, res, next) => {
   const sauceObject = JSON.parse(req.body.sauce);
   delete sauceObject._id;
@@ -56,6 +56,7 @@ exports.modifySauce = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
+//Supprimer une sauce
 exports.deleteSauce = (req, res, next) => {
   Sauce.findOne({ _id: req.params.id }) //on utilise l'ID que nous recevons comme paramètre pour accéder au Sauce correspondant dans la bdd
     .then((sauce) => {
@@ -70,6 +71,7 @@ exports.deleteSauce = (req, res, next) => {
     .catch((error) => res.status(500).json({ error }));
 };
 
+//Like ou dislike
 exports.likeSauce = (req, res, next) => {
   if (req.body.like == 1) {
     //si user a like
