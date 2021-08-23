@@ -8,16 +8,17 @@ const userRoutes = require("./routes/user");
 
 const sauceRoutes = require("./routes/sauce");
 
-const path = require('path');
+const path = require("path");
 
 const app = express();
 
+require("dotenv").config();
+
 app.use(bodyParser.json());
-
-
+//Je connecte la base de la données et la protege en mettant les identifiants dans les variables d'environnement
 mongoose
   .connect(
-    "mongodb+srv://Gcraigh22:Gcraigh311522@cluster0.szvea.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.szvea.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
   )
   .then(() => console.log("Connexion à MongoDB réussie !"))
