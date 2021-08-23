@@ -1,23 +1,32 @@
-# HOT TAKES #
+# Piiquante #
+
+## Contexte du projet ##
+
+Piiquante se dédie à la création de sauces épicées dont les recettes sont gardées
+secrètes. Pour tirer parti de son succès et générer davantage de buzz, l'entreprise
+souhaite créer une application web dans laquelle les utilisateurs peuvent ajouter
+leurs sauces préférées et liker ou disliker les sauces ajoutées par les autres.
+
 
 ## Installation ##
 
-Here are the dependancies you need to install:
-- NodeJS 12.14 or 14.0.
-- Angular CLI 7.0.2.
-- node-sass : make sure to use the corresponding version to NodeJS. For Noe 14.0 for instance, you need node-sass in version 4.14+.
+Cloner ce repo
 
-On Windows, these installations require to use PowerShell in administrator mode.
+### Faire fonctionner le Frontend ###
 
-The, clone this repo and run `npm install`.
+* Ouvrir le terminal sur le dossier et exécuter npm install pour installer les dépendances .
+* Pour avoir accés au serveur | npm run start:win32
+* Rendez vous sur le http://localhost:8080.
 
+** Si vous utilisez VSCode, utilisez l'extension LiveShare pour faire fonctionner le
+serveur front-end sans avoir recours à npm install.
 
-## Usage ##
+### Faire fonctionner le Backend ###
 
-Run `npm start`. This should both run the local server and launch your browser.
+* Ouvrir le terminal dans le dossier backend
+* Installer le package nodemon | npm install -g nodemon
+* Lancer la commande | nodemon server (Le backend se lance sur le port 3000)
 
-If your browser fails to launch, or shows a 404 error, navigate your browser to http://localhost:8080.
+## Connexion ##
 
-The app should reload automatically when you make a change to a file.
-
-Use `Ctrl+C` in the terminal to stop the local server.
+Une fois sur le localhost 8080 l'utilisateur doit fournir une adresse mail et un mot de passe de 8 caractères minimum avec au moins une majuscule une minuscule et un chiffre.
