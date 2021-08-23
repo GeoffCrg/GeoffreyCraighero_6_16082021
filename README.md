@@ -1,5 +1,6 @@
 # Piiquante #
 
+![Image text](/frontend/piiquante.png)
 
 
 ## Contexte du projet ##
